@@ -38,4 +38,51 @@ create table empresa(
     direccion_empresa varchar(25)
 );
 
+create table solicitud_ingreso(
+    id_solicitud number not null,
+    rut_postulante char not null,
+    hora_solicitud timestamp not null,
+    fecha_solisitud date not null,
+    emprea_id_empresa number not null
+);
+
+create table postulante(
+    rut_postulante char not null,
+    id_solicitud number not null,
+    nombre_pastulante varchar(15) not null,
+    apellidos_postulante varchar(15) not null,
+    genero_postulante varchar(10) not null,
+    adjunto_cv varchar(2) not null,
+    pretencion_sueldo number not null,
+    solicitud_ingreso_id_solicitud number not null,
+    solicitud_ingreso_rut_postulante char not null,
+    solicitud_ingreso_SINTACT_empresa_id_SINTACT number not null,
+    correo_electronico char not null,
+    nacionalidad_postulante varchar(12) not null,
+    numero_pasaporte_postulante number not null
+);
+
+create table telefono_postulante(
+    rut_postulante char not null,
+    id_solicitud number not null,
+    id_telefono number not null,
+    postulante_id_solicitud number not null,
+    postulante_rut_postulante char not null
+);
+
+create table tipo_telefono_postulante(
+    rut_postulante char not null,
+    id_solicitud number not null,
+    id_telefono number not null,  
+    telefono_postulante number not null,
+    telefono_casa_postulante number not null,
+    telefono_emergencia_postulante number not null,
+    telefono_contacto_postulante number not null,
+    telefono_postulante_rut_postulante number not null,
+    telefono_postulante_id_solicitu number not null
+);
+
+
+
+
 
