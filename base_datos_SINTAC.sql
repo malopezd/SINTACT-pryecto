@@ -82,6 +82,35 @@ create table tipo_telefono_postulante(
     telefono_postulante_id_solicitu number not null
 );
 
+create table discapacidad(
+    rut_postulante char not null,
+    id_solicitud number not null,
+    id_discapacidad number not null
+    postulante_id_solicitud number not null,
+    postulante_rut-postulante char not null,
+);
+
+create table tipo_discapacidad_postulante(
+    rut_postulante char not null,
+    id_discapacidad number not null,
+    cuenta_con_discapacidad varchar(2) not null,
+    tipo_discapacidad_postulante varchar(15) not null,
+    discapacidad_postulante_rut_postulante char not null
+);
+
+create table direccion_postulante(
+    rut_postulante char not null,
+    id_solicitud number not null,
+    direccion_postulante char not null,
+    comuna_id_comuna number not null,
+    comuna_provincia_id_provincia number not null,
+    comuna-provincia_region_id_region number not null,
+    postulante_id_solicitud number not null,
+    postulante_rut_postulante char not null
+);
+
+create table afiliado(
+
 
 
 
